@@ -1,0 +1,12 @@
+#华为面试题
+#识别输入的字符串中出现最多的字母，大小写敏感
+from collections import Counter
+word=input()
+word_list=word.split(" ")
+value=word_list[1]
+if  value=="true":
+    count=Counter(word_list[0])
+    print (count.most_common(1)[0])
+else:
+    count=Counter(word_list[0].lower())
+    print (count.most_common(1)[0])
